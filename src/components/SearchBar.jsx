@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 
-export default function SearchBar() {
+export default function SearchBar({ onSearch }) {
     const [city, setCity] = useState('');
 
-    function handleSearch({onSearch}) {
+    function handleSearch() {
         if(city.trim() === "") {
             alert('Enter a city name');
         }else{
             onSearch(city);
+            setCity('');
         }
     }
 

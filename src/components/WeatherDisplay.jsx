@@ -1,19 +1,19 @@
 import React from 'react';
-import { fetchData } from '../api/FetchData';
 
-export default async function WeatherDisplay () {
+export default function WeatherDisplay ({weatherData}) {
 
+    if(!weatherData){
+        return <p>Please enter a city to see weather information.</p>
+    }
+
+    const {coord, weather, main, name, sys } = weatherData;
+
+    return(
+        <>
+            <h1>{name}</h1>
+            <h2>{Math.ceil(main.temp - 273.15)}°C</h2> {/* Kelvin to Celcius: 288K − 273.15*/}
+            <p>{weather.description}</p>
+            <p>H: {Math.ceil(main.temp_max - 273.15)}°C &nbsp; L: {Math.ceil(main.temp_max - 273.15)}°C</p>
+        </>
+    )
 }
-
-
-//min, max, city name, 
-// Once the weather data is fetched, pass it to the WeatherDisplay component.
-
-// In WeatherDisplay, render the city name, temperature, weather condition, and other details.
-// In App.js, use conditional rendering to display weather data only after a successful API call.
-
-
-
-// In WeatherDisplay.js:
-// Add conditional rendering to show weather information only if the data is available.
-// Show a "No data available" message if there's an error or if the weather data isn't returned correctly.
