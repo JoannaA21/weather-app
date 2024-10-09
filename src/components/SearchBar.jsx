@@ -14,12 +14,15 @@ export default function SearchBar({ onSearch }) {
 
     return(
         <>
-            <input 
-            type="text" 
-            placeholder='Enter city name' 
-            value={city} 
-            onChange={(event) => setCity(event.target.value)} />
-            <button type='button' onClick = {handleSearch}>Search</button>
+            <div className="search-container">
+                <input 
+                type="text" 
+                placeholder='Enter City Location' 
+                value={city} 
+                onChange={(event) => setCity(event.target.value)} 
+                className='search'/>
+                <button type='button' onClick = {handleSearch} className="btnSearch">Search</button>
+            </div>
         </>
     )
 }

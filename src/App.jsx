@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
+import './styles/App.css'
 import {fetchData} from './api/FetchData'
 import SearchBar from './components/SearchBar'
 import WeatherDisplay from './components/WeatherDisplay';
+
 
 function App() {
   const [data, setData] = useState(null);
@@ -37,8 +39,8 @@ function App() {
 
   return (
     <>
-    <div>
-      <h1>Weather App</h1>
+    <h1 className='projectHeader'>Weather App</h1>
+    <div className="container">
       <SearchBar onSearch={handleSearch}/>
       <WeatherDisplay weatherData={data}/>
       </div>
