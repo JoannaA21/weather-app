@@ -31,17 +31,17 @@
   color: white;
 } */
 
-
 /* App.css */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   /* background-color: #546e7a; */
 }
 
 .projectHeader {
   text-align: center;
   font-size: 2rem;
+  font-weight: 600;
   margin: 20px 0;
   color: #248bda;
 }
@@ -89,11 +89,9 @@ body {
 
 .btnSearch:hover {
   background-color: #248bda;
-  color:white;
+  color: white;
   border-color: black;
 }
-
-
 
 .weather-info {
   /* text-align: center; */
@@ -109,7 +107,6 @@ body {
   margin: 0 auto; /* Center the icon and add spacing below */
 }
 
-
 .city-name {
   font-size: 1.5rem;
   color: white;
@@ -122,7 +119,7 @@ body {
   font-size: 6rem;
   color: white;
   font-weight: 700;
-  margin-bottom: 0;;
+  margin-bottom: 0;
 }
 
 .weather-description {
@@ -138,10 +135,9 @@ body {
   color: white;
 }
 
-p{
+p {
   color: white;
 }
-
 
 @media (min-width: 768px) {
   .container {
