@@ -1,3 +1,3 @@
 # Description
 
-A simple weather web app https://joannaapellido-weather-app.netlify.app/
+A simple weather web app https://japellido-weather-app.netlify.app/
